@@ -110,12 +110,12 @@ function drawEverything() {
 		canvasContext.fillStyle = '#00a597';
 
 		if (player1Score >= WINNING_SCORE) {
-			canvasContext.fillText('Left player won!', 150, canvas.height/2 - 50)
+			canvasContext.fillText('Left player won!', 175, canvas.height/2 - 50)
 			
 		} else if (player2Score >= WINNING_SCORE) {
-			canvasContext.fillText('Right player won!', 150, canvas.height/2 - 50)
+			canvasContext.fillText('Right player won!', 175, canvas.height/2 - 50)
 		}
-		canvasContext.fillText('Click to continue', 150, canvas.height/2)
+		canvasContext.fillText('Click to continue', 175, canvas.height/2)
 		return;
 	}
 
