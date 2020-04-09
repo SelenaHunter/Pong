@@ -1,0 +1,160 @@
+// TABLE OF CONTENTS
+// 1. Colors
+// 2. Fonts
+// 3. Animations
+// 4. Navbar
+// 5. Header
+// 6. Footer
+// 7. Margins and Padding
+// 8. Page Breaks
+// 9. Buttons
+// 10. Images
+// 11. Blockquotes
+// 12. Tables
+// 13. Forms
+
+// ====== 1. Colors =======
+
+$white: #FFFFFF;
+$light-grey: #f3f3f3;
+$grey: #e6e6e6;
+$dark-grey: #bebebe;
+$black: #333333;
+
+$red: #db1a00;
+$yellow: #fffc52;
+$orange: #ffa500;
+$green: #94dd0e;
+$blue: #00a597;
+$purple: #770059;
+
+
+$background-color: $white;
+
+$font-paragraph-color: $black;
+$font-header-color: $blue;
+
+$link-color: $purple;
+$link-color-hover: $orange;
+
+$nav-link-background-color: $grey;
+$nav-link-background-color-hover: $light-grey;
+$nav-link-color: $link-color;
+$nav-link-color-hover: $link-color-hover;
+$nav-link-border-color: $dark-grey;
+$nav-background-color: $dark-grey;
+$fa-fa-toggle-color: $black;
+
+$button-background-color: $blue;
+$button-background-color-hover: $green;
+$button-text-color: $white;
+$button-text-color-hover: $black;
+
+$image-overlay-color: $black;
+
+$left-blockquote-border-color: $red;
+$right-blockquote-border-color: $left-blockquote-border-color;
+
+$horizontal-rule-color: $purple;
+
+$table-border-color: $dark-grey;
+
+$code-background-color: $grey;
+
+$highlight-color: $grey;
+$highlight-mark-color: $highlight-color;
+
+// ====== 2. Fonts ========
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Ubuntu+Mono);
+
+$font-header-family: 'Open Sans Condensed', sans-serif;
+$font-body-family: 'Open Sans', sans-serif;
+$font-code-family: 'Ubuntu Mono', monospace;
+
+$font-header-base-size-mobile: 16px;
+$font-paragraph-base-size-mobile: 14px;
+
+$font-header-base-size: 24px;
+$font-header-scale: 8; // amount in px that headings grow
+$font-header-scale-mobile: $font-header-scale / 2;
+$font-header-weight: normal;
+
+$font-paragraph-base-size: 16px;
+$font-paragraph-line-height: ($font-paragraph-base-size + 6px);
+
+$link-text-decoration: none;
+$link-text-decoration-hover: none;
+
+$definition-title-weight: 700;
+$definition-body-weight: normal;
+
+
+// ====== 3. Animations =======
+$color-transition: color 0.2s ease, background 0.2s ease;
+$button-transform-press: translateY(2px);
+
+
+// ======= 4. Navbar ========
+$nav-link-padding: 0.5rem;
+$nav-width: 100%;
+$nav-list-style: none;
+$nav-link-border: 1px solid $nav-link-border-color;
+
+// ====== 5. Header ======
+$header-align: center;
+
+
+// ====== 6. Footer ======
+
+// ====== 7. Margins and Padding ======
+$margin-global: 0 0.5rem;
+
+$margin-header: 0.6rem 0;
+$margin-paragraph: 0.4rem 0;
+
+$margin-main: 0 2em;
+$margin-main-mobile: 0 0.5em;
+
+$margin-cite: 0;
+$margin-blockquote: 2rem;
+$padding-blockquote: 1rem;
+
+$margin-list-bullets: 1rem;
+
+$padding-table-cell: 0.5rem;
+
+$padding-code: 0.1rem;
+
+// ====== 8. Page Breaks =====
+$desktop: 550px;
+
+
+// ===== 9. Buttons =====
+$button-padding: 6px 12px;
+$button-border: none;
+$button-box-shadow: 0px 1px 2px $black;
+$button-box-shadow-active: 0 0 0 $black;
+$button-cursor: pointer;
+$button-radius: 2px;
+
+
+// ===== 10. Images =====
+$image-width: 100%;
+$figcaption-align: center;
+
+// ===== 11. Blockquote =====
+$left-blockquote-border-thickness: 2px;
+$left-blockquote-border-style: solid;
+$right-blockquote-border-thickness: $left-blockquote-border-thickness;
+$right-blockquote-border-style: $left-blockquote-border-style;
+
+$blockquote-cite-align: right;
+
+
+// ===== 12. Tables =====
+$table-border-size: 1px;
+$table-border-style: solid;
+$table-text-align: center;
+
+// ===== 13. Forms =====
+$label-width: 8rem;

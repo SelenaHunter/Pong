@@ -1,0 +1,321 @@
+@import 'variables';
+
+// Table of Contents
+// 1. Global
+// 2. Navbar
+// 3. Typography
+// 4. Buttons
+// 5. Images
+// 6. Tables
+// 7. Forms
+// ??. Optional Styles
+// ??. Mixins
+
+// ===== 1. Global =====
+body {
+    background-color: $background-color;
+    color: $font-paragraph-color;
+    margin: $margin-global;
+}
+
+main {
+    // Mobile styles
+    margin: $margin-main-mobile;
+
+    // Desktop styles
+    @media all and (min-width: $desktop) {
+        margin: $margin-main;
+    }
+}
+
+
+// ===== 2. Navbar =====
+.navbar {
+    width: $nav-width;
+    background-color: $nav-background-color;
+    display: none;
+    
+    ul {
+        margin-left: 0; //override default list margin
+        list-style: $nav-list-style;
+    }
+    
+    li {
+        background-color: $nav-link-background-color;
+        transition: $color-transition;
+        
+        &:hover {
+            background-color: $nav-link-background-color-hover;
+            transition: $color-transition;
+        }
+        
+        a {
+            color: $nav-link-color;
+            padding: $nav-link-padding;
+            
+            &:hover {
+                color: $nav-link-color-hover;
+            }
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .navbar {
+        display: block;
+    }
+    .fa-fa-toggle-icon {
+        display: none;
+    }
+}
+
+.fa-fa-toggle-icon svg {
+    cursor: pointer; 
+    width: 20px;
+    fill: $fa-fa-toggle-color;
+}
+
+
+// ===== 3. Typography =====
+// Global (mobile and up) styles
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $font-header-base-size-mobile + $font-header-scale-mobile * (6 - $i);
+        font-weight: $font-header-weight;
+        text-align: $header-align;
+        font-family: $font-header-family;
+        margin: $margin-header;
+        color: $font-header-color;
+    }
+}
+
+p, a, label, dl, ol, ul, table, figcaption, legend, input, ::placeholder, textarea, optgroup, select {
+    font-family: $font-body-family;
+    font-size: $font-paragraph-base-size-mobile;
+    line-height: $font-paragraph-line-height;
+}
+
+dl, dt, legend {
+    font-weight: $definition-title-weight;
+}
+
+dd {
+    font-weight: $definition-body-weight;
+}
+
+p {
+    padding: $margin-paragraph;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-text-decoration;
+    transition: $color-transition;
+
+    &:hover {
+        color: $link-color-hover;
+        transition: $color-transition;
+        text-decoration: $link-text-decoration-hover;
+    }
+}
+
+blockquote {
+    margin: $margin-blockquote;
+    padding: $padding-blockquote;
+    border-left: $left-blockquote-border-thickness $left-blockquote-border-style $left-blockquote-border-color;
+    border-right: $right-blockquote-border-thickness $right-blockquote-border-style $right-blockquote-border-color;
+
+    cite {
+        margin: $margin-cite;
+        display: block;
+        text-align: $blockquote-cite-align;
+    }
+}
+
+ol, ul {
+    list-style-position: inside;
+    margin-left: $margin-list-bullets;
+}
+
+kbd, code, pre, samp {
+    font-family: $font-code-family;
+    background-color: $code-background-color;
+    padding: $padding-code;
+}
+
+hr {
+    color: $horizontal-rule-color;
+}
+
+mark {
+    background-color: $highlight-mark-color;
+}
+
+::selection, ::-moz-selection {
+    background: $highlight-color;
+}
+
+// Desktop styles
+@media all and (min-width: $desktop) {
+    @for $i from 1 through 6 {
+        h#{$i} {
+        font-size: $font-header-base-size + $font-header-scale * (6 - $i);
+        font-weight: $font-header-weight;
+        }
+    }
+    p, a {
+        font-size: $font-paragraph-base-size;
+    }
+}
+
+
+// ===== 4. Buttons =====
+button, input[type=submit], input[type=button], input[type=reset] {
+    border: $button-border;
+    color: $button-text-color;
+    background-color: $button-background-color;
+    padding: $button-padding;
+    cursor: $button-cursor;
+    box-shadow: $button-box-shadow;
+    transition: $color-transition;
+    border-radius: $button-radius;
+
+    &:hover {
+        color: $button-text-color-hover;
+        background-color: $button-background-color-hover;
+        transition: $color-transition;
+    }
+
+    &:active {
+        transform: $button-transform-press;
+        box-shadow: $button-box-shadow-active;
+        border-radius: $button-radius;
+    }
+
+    &:disabled {
+        @extend .disabled;
+    }    
+}
+
+
+// ===== 5. Images =====
+img {
+    width: $image-width;
+}
+
+figcaption {
+    text-align: $figcaption-align;
+}
+
+
+// ===== 6. Tables =====
+
+table {
+    border-collapse: collapse;
+
+    tr, td, th {
+        border: $table-border-size $table-border-style $table-border-color;
+        padding: $padding-table-cell;
+        text-align: $table-text-align;
+    }
+}
+
+// ===== 7. Forms =====
+
+form label {
+    width: $label-width;
+    display: inline-block;
+}
+
+// ===== ??. Optional Styles =====
+.horizontal-flex {
+    // Mobile styles
+    width: 100%;
+    text-align: center;
+    
+    li {
+        border: $nav-link-border;
+    }
+    
+    // Desktop styles
+    @media all and (min-width: $desktop) {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            
+            li {
+                justify-content: space-between;
+                flex: 1;
+            }
+        }
+    }
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.image-container-animated-hover {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        z-index: 2;
+        background: $image-overlay-color;
+        opacity: 0.5;
+        transform: rotate(-3deg);
+        top: 80%;
+        left: -90%;
+        transition: all 0.7s cubic-bezier(0.19, 0.63, 0, 1.2);
+    }
+
+    &:hover::before {
+        top: 70%;
+        opacity: 0.8;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+.disabled {
+    background-color: $grey;
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.8;
+
+    &:hover {
+        background-color: $grey;
+        color: $dark-grey;
+    }
+
+    &:active {
+        transform: none;
+    }
+}
+
+.active {
+    display: block;
+}
+
+
+// ===== ??. Mixins =====
+
+@mixin user-select($args...) {
+    -webkit-user-select: $args;
+    -moz-user-select: $args;
+    -ms-user-select: $args;
+    -o-user-select: $args;
+    user-select: $args;
+  }

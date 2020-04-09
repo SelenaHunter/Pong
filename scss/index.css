@@ -1,0 +1,397 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Ubuntu+Mono);
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  margin: 0 0.5rem;
+}
+
+main {
+  margin: 0 0.5em;
+}
+
+@media all and (min-width: 550px) {
+  main {
+    margin: 0 2em;
+  }
+}
+
+.navbar {
+  width: 100%;
+  background-color: #bebebe;
+  display: none;
+}
+
+.navbar ul {
+  margin-left: 0;
+  list-style: none;
+}
+
+.navbar li {
+  background-color: #e6e6e6;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar li:hover {
+  background-color: #f3f3f3;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar li a {
+  color: #770059;
+  padding: 0.5rem;
+}
+
+.navbar li a:hover {
+  color: #ffa500;
+}
+
+@media all and (min-width: 550px) {
+  .navbar {
+    display: block;
+  }
+  .fa-fa-toggle-icon {
+    display: none;
+  }
+}
+
+.fa-fa-toggle-icon svg {
+  cursor: pointer;
+  width: 20px;
+  fill: #333333;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0.6rem 0;
+  color: #00a597;
+}
+
+p, a, label, dl, ol, ul, table, figcaption, legend, input, ::-webkit-input-placeholder, textarea, optgroup, select {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+p, a, label, dl, ol, ul, table, figcaption, legend, input, :-ms-input-placeholder, textarea, optgroup, select {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+p, a, label, dl, ol, ul, table, figcaption, legend, input, ::-ms-input-placeholder, textarea, optgroup, select {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+p, a, label, dl, ol, ul, table, figcaption, legend, input, ::placeholder, textarea, optgroup, select {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+dl, dt, legend {
+  font-weight: 700;
+}
+
+dd {
+  font-weight: normal;
+}
+
+p {
+  padding: 0.4rem 0;
+}
+
+a {
+  color: #770059;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+a:hover {
+  color: #ffa500;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 2rem;
+  padding: 1rem;
+  border-left: 2px solid #db1a00;
+  border-right: 2px solid #db1a00;
+}
+
+blockquote cite {
+  margin: 0;
+  display: block;
+  text-align: right;
+}
+
+ol, ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+kbd, code, pre, samp {
+  font-family: "Ubuntu Mono", monospace;
+  background-color: #e6e6e6;
+  padding: 0.1rem;
+}
+
+hr {
+  color: #770059;
+}
+
+mark {
+  background-color: #e6e6e6;
+}
+
+::-moz-selection, ::-moz-selection {
+  background: #e6e6e6;
+}
+
+::selection, ::-moz-selection {
+  background: #e6e6e6;
+}
+
+@media all and (min-width: 550px) {
+  h1 {
+    font-size: 64px;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 56px;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 48px;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 40px;
+    font-weight: normal;
+  }
+  h5 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+  h6 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  p, a {
+    font-size: 16px;
+  }
+}
+
+button, input[type=submit], input[type=button], input[type=reset] {
+  border: none;
+  color: #FFFFFF;
+  background-color: #00a597;
+  padding: 6px 12px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 2px #333333;
+          box-shadow: 0px 1px 2px #333333;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+  border-radius: 2px;
+}
+
+button:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
+  color: #333333;
+  background-color: #94dd0e;
+  -webkit-transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+button:active, input[type=submit]:active, input[type=button]:active, input[type=reset]:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 0 0 #333333;
+          box-shadow: 0 0 0 #333333;
+  border-radius: 2px;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr, table td, table th {
+  border: 1px solid #bebebe;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+form label {
+  width: 8rem;
+  display: inline-block;
+}
+
+.horizontal-flex {
+  width: 100%;
+  text-align: center;
+}
+
+.horizontal-flex li {
+  border: 1px solid #bebebe;
+}
+
+@media all and (min-width: 550px) {
+  .horizontal-flex ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .horizontal-flex ul li {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.image-container-animated-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container-animated-hover::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  z-index: 2;
+  background: #333333;
+  opacity: 0.5;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  top: 80%;
+  left: -90%;
+  -webkit-transition: all 0.7s cubic-bezier(0.19, 0.63, 0, 1.2);
+  transition: all 0.7s cubic-bezier(0.19, 0.63, 0, 1.2);
+}
+
+.image-container-animated-hover:hover::before {
+  top: 70%;
+  opacity: 0.8;
+}
+
+.image-container-animated-hover img {
+  display: block;
+}
+
+.disabled, button:disabled, input[type=submit]:disabled, input[type=button]:disabled, input[type=reset]:disabled {
+  background-color: #e6e6e6;
+  color: #bebebe;
+  border: 1px solid #bebebe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.disabled:hover, button:hover:disabled, input:hover[type=submit]:disabled, input:hover[type=button]:disabled, input:hover[type=reset]:disabled {
+  background-color: #e6e6e6;
+  color: #bebebe;
+}
+
+.disabled:active, button:active:disabled, input:active[type=submit]:disabled, input:active[type=button]:disabled, input:active[type=reset]:disabled {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.active {
+  display: block;
+}
+
+section {
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
